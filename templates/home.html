@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Math Performance Indicator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+    }
+
+    nav.menu-bar {
+      background-color: #1c1f26;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav.menu-bar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav.menu-bar ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    }
+
+    h1 {
+      text-align: center;
+      color: #00bfff;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    select,
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      background-color: #ffffff;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    input[type="number"]::placeholder {
+      color: #777;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #00bfff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #009acd;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      color: #d0d0d0;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      nav.menu-bar {
+        justify-content: center;
+      }
+
+      nav.menu-bar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="menu-bar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/RonithReddy08/student-math-score-prediction-ml" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Student Math Performance Indicator</h1>
+
+    <form action="{{ url_for('predict_datapoint') }}" method="post">
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Select your Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="ethnicity">Race or Ethnicity</label>
+        <select id="ethnicity" name="ethnicity" required>
+          <option value="" disabled selected>Select Ethnicity</option>
+          <option value="group A">Group A</option>
+          <option value="group B">Group B</option>
+          <option value="group C">Group C</option>
+          <option value="group D">Group D</option>
+          <option value="group E">Group E</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="parent-education">Parental Level of Education</label>
+        <select id="parent-education" name="parental_level_of_education" required>
+          <option value="" disabled selected>Select Parent Education</option>
+          <option value="some high school">Attended High School (Not Graduated)</option>
+          <option value="high school">High School (Graduated)</option>
+          <option value="some college">Attended College (Not Graduated)</option>
+          <option value="associate's degree">Associate's Degree</option>
+          <option value="bachelor's degree">Bachelor's Degree</option>
+          <option value="master's degree">Master's Degree</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="lunch">Lunch Type</label>
+        <select id="lunch" name="lunch" required>
+          <option value="" disabled selected>Select Lunch Type</option>
+          <option value="free/reduced">Free or Reduced-Price Lunch</option>
+          <option value="standard">Full-Priced Lunch</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="test-course">Test Preparation Course</label>
+        <select id="test-course" name="test_preparation_course" required>
+          <option value="" disabled selected>Select Test Course</option>
+          <option value="none">None</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="reading-score">Reading Score out of 100</label>
+        <input id="reading-score" type="number" name="reading_score" placeholder="Enter Reading Score" min="0" max="100" required />
+      </div>
+
+      <div class="form-group">
+        <label for="writing-score">Writing Score out of 100</label>
+        <input id="writing-score" type="number" name="writing_score" placeholder="Enter Writing Score" min="0" max="100" required />
+      </div>
+
+      <div class="form-group">
+        <input class="btn-primary" type="submit" value="Predict Your Math Score" />
+      </div>
+    </form>
+
+    <h2>The predicted math score is {{ results }}</h2>
+  </div>
+
+</body>
+</html>

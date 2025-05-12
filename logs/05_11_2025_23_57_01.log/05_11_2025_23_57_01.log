@@ -1,0 +1,27 @@
+[ 2025-05-11 23:57:01,477 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-05-11 23:57:01,483 ] 97 werkzeug - INFO -  * Debugger PIN: 657-519-120
+[ 2025-05-11 23:57:05,073 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/May/2025 23:57:05] "GET / HTTP/1.1" 200 -
+[ 2025-05-11 23:57:05,090 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/May/2025 23:57:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+[ 2025-05-11 23:57:11,789 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/May/2025 23:57:11] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-11 23:57:11,798 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/May/2025 23:57:11] "[36mGET /static/css/styles_home.css HTTP/1.1[0m" 304 -
+[ 2025-05-11 23:59:28,198 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/May/2025 23:59:28] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-11 23:59:28,211 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/May/2025 23:59:28] "[36mGET /static/css/styles_home.css HTTP/1.1[0m" 304 -
+[ 2025-05-11 23:59:30,137 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/May/2025 23:59:30] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:00:48,423 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:00:48] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:01:05,633 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:01:05] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:04:38,933 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:04:38] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:06:37,936 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:06:37] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:08:45,144 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:08:45] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:08:52,706 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:08:52] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-12 00:08:52,723 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:08:52] "[36mGET /static/css/styles_home.css HTTP/1.1[0m" 304 -
+[ 2025-05-12 00:08:58,973 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:08:58] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:09:12,916 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:09:12] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:10:36,572 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:10:36] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:10:48,842 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:10:48] "GET / HTTP/1.1" 200 -
+[ 2025-05-12 00:11:02,410 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:11:02] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-12 00:11:02,422 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:11:02] "[36mGET /static/css/styles_home.css HTTP/1.1[0m" 304 -
+[ 2025-05-12 00:12:01,863 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:12:01] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-12 00:16:20,749 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:16:20] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-12 00:19:29,956 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:19:29] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-12 00:20:54,188 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:20:54] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-12 00:21:06,448 ] 97 werkzeug - INFO - 127.0.0.1 - - [12/May/2025 00:21:06] "POST /predictdata HTTP/1.1" 200 -
